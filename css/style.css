@@ -1,6 +1,213 @@
 body {
     margin: 0;
+    font-family: 'Mulish', sans-serif;
+}
+.button {
+    background-color: #E02C6D;
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.content-center {
+    justify-content: center;
+}
+/* * * Header CSS * * */
+header {
+    background: rgba(45, 37, 160, 1);
+}
+header nav {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
+}
+nav .menu-items {
+    display: flex;
+}
+nav .menu-items ul {
+    list-style-type: none;
+    display: contents;
+}
+nav .menu-items ul li a {
+    text-decoration: none;
+    padding-right: 20px;
+    margin-right: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 .header-hero {
     display: flex;
+    width: 85%;;
+    margin: auto;
+    padding: 60px 0;
+   
 }
+.hero-col-text {
+    width: 50%;
+}
+.hero-col-text h1 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    color: #FFFFFF;
+    margin: 50px 0px 30px;
+
+}
+.hero-col-image {
+    width: 50%;
+}
+.hero-col-image img {
+    width: 100%;
+}
+/* * * Player Grid CSS * * */
+.player-grid {
+    width: 80%;
+    margin: auto;
+    padding: 100px 40px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-evenly;
+}
+.player-grid-col {
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+.player-grid-col img {
+    width: 100%;
+}
+.player-grid-col h2 {
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.player-grid-col p {
+    font-weight: 300;
+}
+.social-accounts {
+    display: flex;
+}
+.social-accounts .social-icon {
+    height: 30px;
+    width: 30px;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #BBD2E0;
+    margin:0 5px;
+    transition: 1s;
+}
+.social-accounts .social-icon:hover {
+    background-color: #E02C6D;
+    transform: scale(1.1);
+}
+.social-accounts a {
+    color: #ffffff;
+}
+.social-accounts a i {
+    font-size: 16px;
+    padding: 7px;
+} 
+/* * * Highlight Section CSS * * */
+.highlight-row {
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    align-items: center;
+}
+.highlight-text h2 {
+    color: #0A0826;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;  
+    line-height: 1.2;
+}
+.highlight-text p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #403939;
+}
+.highlight-image img {
+    width: 100%;
+}
+/* * * Field Section CSS * * */
+.field-section {
+    background-image: url("../images/empty-field.jpg");
+    height: 500px;
+    overflow: hidden;
+    margin: 100px 0;
+}
+.field-section h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 900;
+}
+.field-ball img {
+    width: 200px;
+}
+.field-ball {
+    animation: ball 5s linear infinite alternate;
+    border-radius: 100%;
+  }  
+  @keyframes ball {
+    0%{
+      transform: translate(0, 100%);
+    }
+    40%{
+        transform: translate(40%, 0%);
+    }
+    70%{
+        transform: translate(70%, 80%);
+    }
+    
+    100% {
+      transform: translate(0%, 0);
+    }
+  }
+/* * * Footer CSS * * */
+footer {
+    margin: 150px 0 40px;
+}
+.footer-logo {
+    width: 350px;
+    margin: 20px auto;
+}
+.footer-logo img {
+    width: 100%;
+}
+.footer-copyright {
+    text-align: center;
+    margin: 30px 0;
+}
+.footer-copyright a {
+    margin-top: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #E02C6D;
+    transition: 1s;
+}
+.footer-copyright a:hover {
+    color: #16487E;
+}
+/* Media Query For Tablet */
+@media only screen and (max-width: 1023px) {
+    header nav {
+        width: 97%;
+    }
+    .player-grid {
+        grid-template-columns: 45% 45%;
+    }
+    .highlight-row {
+        grid-template-columns: 100%;
+    }
+  }
