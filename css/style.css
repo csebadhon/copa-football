@@ -11,6 +11,11 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: 1s;
+}
+.button:hover {
+    background-color: #3DBAFD;
+    box-shadow: 10px 10px 5px #0000007D;
 }
 .content-center {
     justify-content: center;
@@ -66,6 +71,10 @@ nav .menu-items ul li a {
 }
 .hero-col-image img {
     width: 100%;
+    transition: 2s;
+}
+.hero-col-image img:hover {
+    transform: rotate(20deg);
 }
 /* * * Player Grid CSS * * */
 .player-grid {
@@ -173,6 +182,48 @@ nav .menu-items ul li a {
       transform: translate(0%, 0);
     }
   }
+  .news-article {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+  }
+  article {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: #ddd;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  }
+  .article-img {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+   article img {
+       width: 100%;
+       height: 100%;
+       transition: 2s;
+   }
+   article img:hover {
+    transform: scale(1.2) rotate(10deg);
+
+   }
+   article h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 35px;
+   }
+   .article-text {
+    padding-left: 10px;
+   }
+   .news-title h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+   }
 /* * * Footer CSS * * */
 footer {
     margin: 150px 0 40px;
@@ -211,3 +262,53 @@ footer {
         grid-template-columns: 100%;
     }
   }
+  /* Media Query For Mobile */
+@media only screen and (max-width: 767px) {
+    header nav {
+        width: 90%;
+    }
+    nav .menu-items {
+        display: block;
+    }
+    .header-hero {
+        display: block;
+    }
+    .hero-col-text {
+        width: 100%;
+    }
+    .hero-col-image {
+        width: 100%;
+        margin-top: 80px;
+    }
+    .hero-col-text h1 {
+        font-size: 36px;
+        line-height: 50px;
+        margin: 0px 0px 30px;
+    }
+     .player-grid {
+        grid-template-columns: 95%;
+        padding: 100px 30px;
+    }  
+    .highlight-row {
+        padding: 0 40px;
+    }
+    .highlight-text h2 {
+        font-size: 35px;
+    }
+    .field-section h2 {
+        font-size: 36px;
+    }
+    .news-article {
+        display: block;
+    }
+    article {
+        display: block;
+    }
+    .article-text {
+        padding: 10px;
+    }
+    .footer-logo {
+        width: 220px;
+    }
+
+}
